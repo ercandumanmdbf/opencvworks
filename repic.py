@@ -11,6 +11,13 @@ import cv2
 #import funct of a pic on img object
 
 img=cv2.imread("kule.jpg")
+print ("press 'q' to quit")
+while(1):
+    cv2.imshow("photo maiden tower",img)
 
-cv2.imshow("photo maiden tower",img)
-cv2.waitKey(1)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        print("Quitting...")
+        break
+
+cv2.destroyAllWindows()
+
